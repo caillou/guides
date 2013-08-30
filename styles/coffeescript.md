@@ -31,6 +31,16 @@
     explanation). In most GUI editors this is shown as an empty line at the end
     of the file.
 
+-   Don't use standalone `@`, write `this` instead.
+
+    ```coffeescript
+    # bad:
+    $('#btn').on('click', $.proxy(@method, @))
+
+    # good:
+    $('#btn').on('click', $.proxy(@method, this))
+    ```
+
 -   Use 2 new lines before a new method definition. Otherwise it can be hard to
     see where a method starts since the methods itself may contain empty lines
     in their bodies.
