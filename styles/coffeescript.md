@@ -1,4 +1,4 @@
-# Upfront CoffeeScript Style Guide
+# CoffeeScript Style Guide
 
 -   Don't write parentheses for function definitions that don't take arguments.
 
