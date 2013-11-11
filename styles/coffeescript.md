@@ -41,13 +41,14 @@
     $('#btn').on('click', $.proxy(@method, this))
     ```
 
--   Use 2 new lines before a new method definition. Otherwise it can be hard to
-    see where a method starts since the methods itself may contain empty lines
+-   Use 2 new lines after a method definition. Otherwise it can be hard to
+    see where a method ends since the methods itself may contain empty lines
     in their bodies.
 
     ```coffeescript
     # bad:
     class Foo
+    
       constructor: ->
         # method body
 
@@ -56,7 +57,6 @@
 
     # good:
     class Foo
-
 
       constructor: ->
         # method body
