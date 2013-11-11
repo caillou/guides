@@ -60,8 +60,8 @@
 
       constructor: ->
         # method body
-
-
+     
+     
       bar: ->
         # method body
     ```
