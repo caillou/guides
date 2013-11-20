@@ -23,7 +23,7 @@ Issues should have exactly one label. The labels we use are:
   assigned developer should have the last word if there is a dispute and
   development is already underway.
 
-- **refactoring**: Everything that concerns project setup, code quality and code
+- **task**: Everything that concerns project setup, code quality and code
   readability should go in this category.
 
 ## Pull-Requests
