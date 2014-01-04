@@ -6,35 +6,9 @@ defines that a version number consists of three numeric characters, separated by
 dots. Optionally to the version number is a identifier, which defines the build
 version.
 
-<table style="text-align:center;">
-	<tr>
-		<td>1</td>
-    <td>.</td>
-    <td>2</td>
-    <td>.</td>
-    <td>3</td>
-    <td>-</td>
-    <td>alpha1</td>
-  </tr>
-	<tr>
-		<td>|</td>
-    <td></td>
-    <td>|</td>
-    <td></td>
-    <td>|</td>
-    <td></td>
-    <td>|</td>
-  </tr>
-	<tr>
-		<td>major</td>
-    <td>.</td>
-    <td>minor</td>
-    <td>.</td>
-    <td>patch</td>
-    <td>-</td>
-    <td>identifier</td>
-  </tr>
-</table>
+| 1     | . | 2     | . | 3     | - | alpha1     |
+|:-----:|:-:|:-----:|:-:|:-----:|:-:|:----------:|
+| major | . | minor | . | patch | - | identifier |
 
 - MAJOR version when you make incompatible API changes,
 - MINOR version when you add functionality in a backwards-compatible manner, and
