@@ -122,8 +122,9 @@
 
 -   Use `on/off`, `yes/no` at will.
 
--   Use parentheses for function invocations unless you only pass a single
-    argument which happens to be a function or an object.
+-   Use parentheses for function invocations unless it spans multiple
+    lines and becomes easier to read.
+    
 
     ```coffeescript
     # bad:
@@ -131,10 +132,19 @@
 
     # good:
     alert('foobar')
-    perform -> something()
+    
+    perform -> 
+      doSomething()
+      
     create
       name: 'John'
       age: 34
+     
+    setup [
+      'first'
+      'second'
+    ], 'even_more_params'
+    
     ```
 
 -   Don't use the unary `++` and `--`, use `+= 1` and `-= 1`.
