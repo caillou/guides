@@ -80,7 +80,7 @@
       # something
     ```
 
--   Be weary of `falsy` and `truthy`. Always test for `null` and `undefined` if that is what you want.
+-   Be wary of `falsy` and `truthy`. Always test for `null` and `undefined` if that is what you want.
     
     ```coffeescript
     # careful
