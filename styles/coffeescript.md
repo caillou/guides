@@ -80,6 +80,26 @@
       # something
     ```
 
+-   Be weary of `falsy` and `truthy`. Always test for `null` and `undefined` if that is what you want.
+    
+    ```coffeescript
+    # careful
+    param ||= 'default'
+
+    # better
+    param ?= 'default'
+    ```
+
+    ```coffeescript
+    # careful
+    if object
+      doSomething()
+
+    # better
+    if object?
+      doSomething()
+    ```
+
 -   Documentation should not be separated by empty lines from what they
     document.
 
