@@ -98,7 +98,8 @@
     join(['a', 'b'], '')   # => "ab"
     join(['a', 'b'], null) # => "a | b"
     ```
-Valid use case for `||=`:
+    
+    Valid use case for `||=`:
 
     ```coffeescript
     atLeastOnce = (fn, times) ->
