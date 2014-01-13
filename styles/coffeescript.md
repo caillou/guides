@@ -80,24 +80,31 @@
       # something
     ```
 
--   Be wary of `falsy` and `truthy`. Always test for `null` and `undefined` if that is what you want.
+-   Use `?` and `?=` instead of checking for `truthy` values if you only want to check for `null` and `undefined`.
     
     ```coffeescript
-    # careful
-    param ||= 'default'
+    # bad:
+    join = (array, separator) ->
+      separator ||= ' | '
+      array.join(separator)
+    # Notice how an empty separator gets overridden (since '' is falsy):
+    join(['a', 'b'], '') # => "a | b"
 
-    # better
-    param ?= 'default'
+    # good:
+    join = (array, separator) ->
+      separator ?= ' | '
+      array.join(separator)
+    # Only undefined and null values get overridden:
+    join(['a', 'b'], '')   # => "ab"
+    join(['a', 'b'], null) # => "a | b"
     ```
+Valid use case for `||=`:
 
     ```coffeescript
-    # careful
-    if object
-      doSomething()
-
-    # better
-    if object?
-      doSomething()
+    atLeastOnce = (fn, times) ->
+      times ||= 1
+      fn(i) for i in [0...times]
+    atLeastOnce(someFn, possiblyZero)
     ```
 
 -   Documentation should not be separated by empty lines from what they
