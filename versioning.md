@@ -19,20 +19,22 @@ version.
 You can read more about this versioning scheme here:
 [http://semver.org/](http://semver.org/)
 
-## publish a new version
+## Publishing a new version
+
 To push a new version, there are several things to do:
 
-- update HISTORY.md with the newest changes. Prepend the changes to the file.
-  
-      0.1.1 / 2014-01-13
-      ==================
+-   Update HISTORY.md with the newest changes. Prepend the changes to the file.
 
-      * make doc.toHtml() working, fixed in #75
-      * allow interaction when using doc-html, fixed in #74
+        0.1.1 / 2014-01-13
+        ==================
 
-- create a new annotated tag: `git tag -a 0.1.1 -m 'version 0.1.1'`  
-  (this can be done using a grunt module: [grunt-tagrelease](https://github.com/darsain/grunt-tagrelease))
-- push the changes
+        * make doc.toHtml() working, fixed in #75
+        * allow interaction when using doc-html, fixed in #74
+
+-   Create a new annotated tag: `git tag -a 0.1.1 -m 'version 0.1.1'`  
+    (this can be done using a grunt module: [grunt-tagrelease](https://github.com/darsain/grunt-tagrelease))
+
+-   Push the changes
 
 ## Dependencies
 
