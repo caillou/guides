@@ -28,7 +28,7 @@ Issues should have exactly one label. The labels we use are:
 
 ## Pull-Requests
 
-Issues of type 'bug', 'feature' and 'refactoring' can all be transformed into pull-requests.
+Issues of type 'bug', 'feature' and 'task' can all be transformed into pull-requests.
 And in fact this is the preferred way of creating a pull-request. To do that you can use
 git's [hub](https://github.com/github/hub) command line wrapper. Look for the command `git pull-request`.
 
