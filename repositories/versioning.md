@@ -23,20 +23,52 @@ You can read more about this versioning scheme here:
 
 To push a new version, there are several things to do:
 
--   Update HISTORY.md with the newest changes. Prepend the changes to the file.
+1. **Build the project**  
+  Run the projects build task and make sure all the tests pass. It is recommended to setup the build task so tests, linting and such are automatically run.
 
-        0.1.1 / 2014-01-13
-        ==================
+2. **Update the Changelog**  
+  Update Changelog.md or HISTORY.md or with the newest changes. Prepend the changes to the file. Link to all merge pull requests.
 
-        * make doc.toHtml() working, fixed in #75
-        * allow interaction when using doc-html, fixed in #74
+  Example Changelog.md:
+  ```markdown
+  # v0.1.2 (2014-03-07)
 
--   Create a new annotated tag: `git tag -a 0.1.1 -m 'version 0.1.1'`  
-    (this can be done using a grunt module: [grunt-tagrelease](https://github.com/darsain/grunt-tagrelease))
+  - [Add selection methods](https://github.com/upfrontIO/Editable.JS/pull/64)
+    - New Selection methods:  
+      #collapseAtBeginning()  
+      #collapseAtEnd()
+    - New Cursor and Selection method:  
+      #setVisibleSelection() (alias for #setSelection())
 
--   Push the changes
+  # v0.1.1 (2014-01-24)
 
-## Dependencies
+  - Setup Versioning
+  ```
+
+3. **Release**  
+  Every project should have a grunt release task that can be called with `:patch`, `:minor`, and `:major`. The release task creates a tag, updates versions in the relevant files (package.json and bower.json) and commits and pushes all changes. For more info check out [grunt-bump](https://github.com/vojtajina/grunt-bump).
+
+  ```bash
+  # Example for a batch release
+  grunt release:patch
+  ```
+
+
+## Working with tags manually
+
+```bash
+# delete a tag locally
+git tag -d v1.2
+
+# delete a tag locally
+git push origin :refs/tags/v1.2
+
+# create a new annotated tag
+git tag -a 0.1.1 -m 'Version 0.1.1'
+```
+
+
+## Declaring Versions of Dependencies
 
 Besides the semantic versioning, dependencies should be referenced using the
 minor version. In node environment this will be in a package.json file. In other
