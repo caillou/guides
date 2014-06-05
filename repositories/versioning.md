@@ -15,6 +15,7 @@ version.
 - PATCH version when you make backwards-compatible bug fixes.
 - Additional labels for pre-release and build metadata are available as
   extensions to the MAJOR.MINOR.PATCH format.
+- As long as the major version is 0 (0.x.x) everything can change at any time. The public API should not be considered stable.
 
 You can read more about this versioning scheme here:
 [http://semver.org/](http://semver.org/)
