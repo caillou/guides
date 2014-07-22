@@ -66,6 +66,9 @@ git push origin :refs/tags/v1.2
 
 # create a new annotated tag
 git tag -a 0.1.1 -m 'Version 0.1.1'
+
+# push tags
+git push --tags
 ```
 
 
