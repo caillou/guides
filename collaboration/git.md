@@ -14,7 +14,19 @@ a global `.gitignore` file.
 [global gitignore]: https://help.github.com/articles/ignoring-files#global-gitignore
 
 
-## Npm install private repositories
+## Npm install private repositories with SSH
+
+Define your dependencies in the following way (tested with npm version 2.1.2):
+
+
+```json
+"dependencies": {
+  "livingdocs-engine": "git+ssh://git@github.com:upfrontIO/livingdocs-engine.git"
+}
+```
+
+
+## Npm install private repositories with HTTP
 
 1. Install node.js and npm (http://nodejs.org/)
 2. Install grunt using `npm install -g grunt-cli`
