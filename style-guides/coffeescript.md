@@ -10,7 +10,7 @@
     someMethod: -> # method body
     ```
 
--   Always use single quotes, unless interpolating.
+-   Always use single quotes, unless interpolating. And use spaces when interpolating `#{ xxx }`
 
     ```coffeescript
     # bad:
@@ -18,7 +18,7 @@
 
     # good:
     name = 'John Doe'
-    name = "#{prename} #{surname}"
+    name = "#{ prename } #{ surname }"
     ```
 
 -   Limit lines to 80 chars.
